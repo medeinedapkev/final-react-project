@@ -1,23 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
+
+import { Routes, Route, Link } from 'react-router-dom';
+import Container from './Components/Container/Container';
+import Navigation from './Components/Navigation/Navigation';
+import BooksPage from './Pages/BooksPage/BooksPage';
+import BookPage from './Pages/BookPage/BookPage';
+import CreateBook from './Pages/CreateBook/CreateBook';
+import EditBook from './Pages/EditBook/EditBook';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navigation />
+      <Routes>
+        <Route path='/books' element={<BooksPage />} />
+        <Route path='/books/:id' element={<BookPage />} />
+        <Route path='/books/create' element={<CreateBook />} />
+        <Route path='/books/edit' element={<EditBook/>} />
+        <Route path='/' element={
+          <Container>
+            <h1>Home page</h1>
+          </Container>} />
+        <Route path='*' element={
+          <Container>
+            <h1>404 ERROR. Page not found</h1>
+            <Link to='/'>Come back to home page...</Link>
+          </Container>} />
+      </Routes>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="colored"
+      />
     </div>
   );
 }

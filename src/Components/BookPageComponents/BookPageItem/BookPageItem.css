@@ -1,0 +1,14 @@
+.book-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.book-photo {
+    height: 50%;
+}
+
+.book-info {
+    list-style-type: none;
+    padding-left: 0;
+}

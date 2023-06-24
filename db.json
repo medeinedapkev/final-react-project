@@ -1,0 +1,55 @@
+{
+  "authors": [
+    {
+      "id": 1,
+      "name": "Bessel Van Der Kolk"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "KŪNAS MENA VISKĄ: kaip išgydyti kūno, proto ir sielos traumas",
+      "description": "Vienas žymiausių pasaulyje traumų specialistų dr. Besselis van der Kolkas daugiau kaip tris dešimtmečius dirbo su traumas patyrusiais žmonėmis. Knygoje „Kūnas mena viską: kaip išgydyti kūno, proto ir sielos traumas“ jis pasitelkia naujausius mokslinius pasiekimus ir parodo skaitytojams, kaip trauma tikrąja žodžio prasme pakeičia ir kūną, ir smegenis, pablogina traumuotų žmonių gebėjimą justi malonumą, domėtis įvairia veikla, kontroliuoti save ir pasitikėti. Autorius tyrinėja naujoviškus gydymo būdus – nuo nervinio grįžtamojo ryšio ir meditacijos iki sporto, dramos ir jogos, kurie atveria naujas pasveikimo galimybes, suaktyvindami natūralų smegenų neuroplastiškumą. Knyga „Kūnas mena viską: kaip išgydyti kūno, proto ir sielos traumas“, pagrįsta dr. B. van der Kolko ir kitų įžymių specialistų atliktais tyrimais, parodo didžiulę mūsų santykių, kurie ir žaloja, ir gydo, jėgą bei suteikia naują viltį atgimti kitokiam gyvenimui.",
+      "year": 2020,
+      "publisher": "Liūtai ne avys",
+      "pages": 640,
+      "authorId": 1,
+      "categoryId": 2
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "Grožinė literūra"
+    },
+    {
+      "id": 2,
+      "title": "Populiarioji psichologija"
+    },
+    {
+      "id": 3,
+      "title": "Literatūra vaikams ir jaunimui"
+    },
+    {
+      "id": 4,
+      "title": "Autobiografija"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "title": "Beprotiškai gera knyga!",
+      "user": "Tomas",
+      "data": "2023-01-07",
+      "bookId": 1
+    }
+  ],
+  "photos": [
+    {
+      "id": 1,
+      "title": "Knygos viršelis",
+      "url": "https://www.patogupirkti.lt/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/k/u/kunas-mena-viska-kaip-isgydyti-kuno-proto.jpg",
+      "bookId": 1
+    }
+  ]
+}

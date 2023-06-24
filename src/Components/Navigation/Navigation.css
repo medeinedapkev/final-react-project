@@ -1,0 +1,138 @@
+/* .nav-button {
+    background-color: blue;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    padding: 13px 30px 11px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+} */
+
+.main-header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.main-header-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* position: fixed; */
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+.hamb-line {
+    background-color: rgb(0, 0, 0);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+
+.hamb-line::before,
+.hamb-line::after{
+    background-color: rgb(0, 0, 0);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+}
+
+.side-menu:checked ~ .main-navigation {
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    padding: 5px 15px;
+    display: inline-block;
+}
+
+@media screen and (min-width: 1120px) {
+    .main-navigation {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .main-menu li{
+        float: left;
+    }
+    .hamb{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .main-navigation {
+        flex-direction: column;
+        width: 100%;
+    }
+    .main-menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .menu-item {
+        font-size: 20px;
+    }
+}
