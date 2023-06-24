@@ -1,6 +1,5 @@
 import './BookPageItem.css'
 import Card from 'react-bootstrap/Card';
-import { useNavigate } from 'react-router-dom';
 import AdministratorButton from '../../AdministratorButton/AdministratorButton';
 
 const BookPageItem = ({ data }) => {
