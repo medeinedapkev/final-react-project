@@ -30,7 +30,7 @@ const CategoriesForm = () => {
     }
 
   return (
-    <div className='categoriesFormWrapper'>
+    <div className={styles.categoriesFormWrapper}>
     <h2 className={styles.formTitle}>Create new category:</h2>
     <Form onSubmit={categoryFormHandler}>
       <div className={styles.formControl}>

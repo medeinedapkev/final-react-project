@@ -31,7 +31,7 @@ const AuthorForm = () => {
     }
 
   return (
-    <div className='authorsFormWrapper'>
+    <div className={styles.authorsFormWrapper}>
     <h2 className={styles.formTitle}>Create new author:</h2>
     <Form onSubmit={authorFormHandler}>
       <div className={styles.formControl}>
