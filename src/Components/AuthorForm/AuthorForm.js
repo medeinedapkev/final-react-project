@@ -31,14 +31,14 @@ const AuthorForm = () => {
     }
 
   return (
-    <div className='authors-form-wrapper'>
-    <h2>Create new author:</h2>
+    <div className='authorsFormWrapper'>
+    <h2 className={styles.formTitle}>Create new author:</h2>
     <Form onSubmit={authorFormHandler}>
       <div className={styles.formControl}>
-         <Form.Label htmlFor="inlineFormInput" visuallyHidden>Author: </Form.Label>
+         <Form.Label htmlFor="authorInput" visuallyHidden>Author: </Form.Label>
            <Form.Control
            className="mb-2"
-           id="inlineFormInput"
+           id="authorInput"
            placeholder="Author's name and surname"
            value={author}
            onChange={authorHandler}
