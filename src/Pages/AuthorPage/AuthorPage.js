@@ -5,6 +5,8 @@ import { API_URL } from '../../config';
 import { toast } from 'react-toastify';
 import Container from '../../Components/Container/Container';
 import Card from '../../Components/Card/Card';
+import styles from './AuthorPage.module.css';
+import AdministratorButton from '../../Components/AdministratorButton/AdministratorButton';
 
 const AuthorPage = () => {
     const { id } = useParams();
@@ -24,7 +26,17 @@ const AuthorPage = () => {
 
   return (
     <Container>
-        <h1>{title}</h1>
+      <div className={styles.titleWrapper}>
+          <h1>{title}</h1>
+          <AdministratorButton
+            toCreate='/authors/create' 
+            toEdit={`/authors/edit/${id}`} 
+            Delete={`/authors/${id}`}
+            navigateTo='/authors'
+            deleteToast='Author was successfully deleted'
+          />
+      </div>
+
         <Card data={booksByAuthor} />
     </Container>
   )

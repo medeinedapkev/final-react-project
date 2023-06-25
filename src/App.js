@@ -15,6 +15,8 @@ import AuthorsPage from './Pages/AuthorsPage/AuthorsPage';
 import AuthorPage from './Pages/AuthorPage/AuthorPage';
 import CreateCategory from './Pages/CreateCategory/CreateCategory';
 import EditCategory from './Pages/EditCategory/EditCategory';
+import CreateAuthor from './Pages/CreateAuthor/CreateAuthor';
+import EditAuthor from './Pages/EditAuthor/EditAuthor';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route path='/categories/edit/:id' element={<EditCategory/>} />
         <Route path='/authors' element={<AuthorsPage/>}/>
         <Route path='/authors/:id' element={<AuthorPage />} />
+        <Route path='/authors/create' element={<CreateAuthor />} />
+        <Route path='/authors/edit/:id' element={<EditAuthor/>} />
         <Route path='/' element={
           <Container>
             <h1>Home page</h1>

@@ -12,7 +12,7 @@ const CategoriesForm = ({ onCategoryFormSubmit, initialData }) => {
 
     useEffect(() => {
       if (initialData) {
-        setCategory(initialData.title)
+        setCategory(initialData.title);
       }
     }, [initialData])
 
@@ -24,14 +24,14 @@ const CategoriesForm = ({ onCategoryFormSubmit, initialData }) => {
             toast.warning('The category must have at least 3 letters')
             return;
         }
-        let newCategory = {};
+        let bookCategory = {};
         if (initialData) {
-          newCategory = {...initialData, title: firstLetterUpperCase(title)};
+          bookCategory = {...initialData, title: firstLetterUpperCase(title)};
         } else {
-          newCategory = { title: firstLetterUpperCase(title) };
+          bookCategory = { title: firstLetterUpperCase(title) };
         }
 
-        onCategoryFormSubmit(newCategory);
+        onCategoryFormSubmit(bookCategory);
     }
 
   return (
