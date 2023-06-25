@@ -3,6 +3,14 @@
     {
       "id": 1,
       "name": "Bessel Van Der Kolk"
+    },
+    {
+      "name": "Tadas Blinda",
+      "id": 2
+    },
+    {
+      "name": "Tomas Karolis",
+      "id": 3
     }
   ],
   "books": [
@@ -13,14 +21,46 @@
       "year": 2020,
       "publisher": "Liūtai ne avys",
       "pages": 640,
+      "authorId": 2,
+      "categoryId": 2,
+      "photo": {
+        "title": "Knygos viršelis",
+        "url": "https://www.patogupirkti.lt/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/k/u/kunas-mena-viska-kaip-isgydyti-kuno-proto.jpg"
+      }
+    },
+    {
+      "title": "Eeeeeeeeeee",
+      "description": "Eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "publisher": "Eeeeeeeeeeeee",
+      "year": 35345,
+      "pages": 54,
       "authorId": 1,
-      "categoryId": 2
+      "categoryId": 1,
+      "photo": {
+        "title": "25344444444444444",
+        "url": "https://via.placeholder.com/150/e743b"
+      },
+      "id": 4
+    },
+    {
+      "title": "Rrrrrrrrrr",
+      "description": "Rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "publisher": "Rrrrrrrrrrr",
+      "year": 4444,
+      "pages": 44,
+      "authorId": 1,
+      "categoryId": 1,
+      "photo": {
+        "title": "Rrrrrrrrrrr",
+        "url": "https://via.placeholder.com/150/e743b"
+      },
+      "id": 5
     }
   ],
   "categories": [
     {
       "id": 1,
-      "title": "Grožinė literūra"
+      "title": "Grožinė literatūra"
     },
     {
       "id": 2,
@@ -33,6 +73,14 @@
     {
       "id": 4,
       "title": "Autobiografija"
+    },
+    {
+      "title": "Drama",
+      "id": 5
+    },
+    {
+      "title": "Treileris",
+      "id": 6
     }
   ],
   "comments": [
@@ -41,14 +89,6 @@
       "title": "Beprotiškai gera knyga!",
       "user": "Tomas",
       "data": "2023-01-07",
-      "bookId": 1
-    }
-  ],
-  "photos": [
-    {
-      "id": 1,
-      "title": "Knygos viršelis",
-      "url": "https://www.patogupirkti.lt/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/k/u/kunas-mena-viska-kaip-isgydyti-kuno-proto.jpg",
       "bookId": 1
     }
   ]

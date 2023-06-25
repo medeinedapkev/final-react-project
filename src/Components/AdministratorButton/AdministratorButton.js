@@ -5,14 +5,14 @@ import { API_URL } from '../../config';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const AdministratorButton = ({ toCreate, toEdit, id }) => {
+const AdministratorButton = ({ toCreate, toEdit, id, Delete, navigateTo, deleteToast }) => {
     const navigator = useNavigate();
 
     const deleteHandler = () => {
-        axios.delete(`${API_URL}/books/${id}`)
+        axios.delete(`${API_URL}${Delete}`)
         .then(res => {
-          navigator('/books');
-          toast.warning('Book was successfully deleted');
+          navigator(navigateTo);
+          toast.warning(deleteToast);
         }).catch(err => toast.error(err.message));
       }
 

@@ -3,24 +3,23 @@ import Card from 'react-bootstrap/Card';
 import AdministratorButton from '../../AdministratorButton/AdministratorButton';
 
 const BookPageItem = ({ data }) => {
-  console.log(data)
-
-  const bookImg = data.photos && data.photos.length > 0 && (
-    data.photos.map(photo => (
-      <div key={photo.id}>
-          <img className='book-photo' src={photo.url} alt={photo.title} />
-      </div>
-  ))
-  )
 
   return (
     <>
       <Card body>
         <div className='book-wrapper'>
-          {bookImg}
+          <div>
+            <img className='book-photo' src={data.photo.url} alt={data.photo.title} />
+          </div>
 
           <div className='book-item'>
-          <AdministratorButton toCreate='/books/create' toEdit='/books/edit' id={data.id} />
+          <AdministratorButton 
+          toCreate='/books/create' 
+          toEdit={`/books/edit/${data.id}`} 
+          Delete={`/books/${data.id}`}
+          navigateTo='/books'
+          deleteToast='Book was successfully deleted'
+          />
 
             <span className='book-author'>{data.author.name}</span>
             <h2 className='book-title'>{data.title}</h2>

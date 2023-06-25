@@ -2,15 +2,19 @@ import styles from './CategoriesForm.module.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { toast } from 'react-toastify';
-import { useState } from 'react';
-import axios from 'axios';
-import { API_URL } from '../../config';
+import { useEffect, useState } from 'react';
 import { firstLetterUpperCase } from '../Functions/Functions';
 
-const CategoriesForm = () => {
+const CategoriesForm = ({ onCategoryFormSubmit, initialData }) => {
     const [ category, setCategory ] = useState('');
 
     const categoryHandler = (event) => setCategory(event.target.value);
+
+    useEffect(() => {
+      if (initialData) {
+        setCategory(initialData.title);
+      }
+    }, [initialData])
 
     function categoryFormHandler(event) {
         event.preventDefault();
@@ -20,13 +24,14 @@ const CategoriesForm = () => {
             toast.warning('The category must have at least 3 letters')
             return;
         }
-        const newCategory = { title: firstLetterUpperCase(title) };
+        let bookCategory = {};
+        if (initialData) {
+          bookCategory = {...initialData, title: firstLetterUpperCase(title)};
+        } else {
+          bookCategory = { title: firstLetterUpperCase(title) };
+        }
 
-        axios.post(`${API_URL}/categories`, newCategory)
-        .then(res => {
-            setCategory('');
-            toast.success('New category was successfully created');
-        }).catch(err => toast.error(err.message));
+        onCategoryFormSubmit(bookCategory);
     }
 
   return (

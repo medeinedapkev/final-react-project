@@ -2,15 +2,19 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import styles from './AuthorForm.module.css';
 import { toast } from 'react-toastify';
-import { useState } from 'react';
-import axios from 'axios';
-import { API_URL } from '../../config';
+import { useEffect, useState } from 'react';
 import { firstLetterUpperCase } from '../Functions/Functions';
 
-const AuthorForm = () => {
+const AuthorForm = ({ onAuthorFormSubmit, initialData }) => {
     const [ author, setAuthor ] = useState('');
 
     const authorHandler = (event) => setAuthor(event.target.value);
+
+    useEffect(() => {
+      if (initialData) {
+        setAuthor(initialData.name);
+      }
+    }, [initialData])
 
     function authorFormHandler(event) {
         event.preventDefault();
@@ -21,13 +25,14 @@ const AuthorForm = () => {
             return;
         }
 
-        const newAuthor = { name: firstLetterUpperCase(name) }
+        let booksAuthor = {};
+        if (initialData) {
+          booksAuthor = {...initialData, name: firstLetterUpperCase(name)}
+        } else {
+          booksAuthor = { name: firstLetterUpperCase(name) };
+        }
 
-        axios.post(`${API_URL}/authors`, newAuthor)
-        .then(res => {
-            setAuthor('');
-            toast.success('New author was successfully created');
-        }).catch(err => toast.error(err.message))
+        onAuthorFormSubmit(booksAuthor);
     }
 
   return (
