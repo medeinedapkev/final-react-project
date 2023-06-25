@@ -5,7 +5,6 @@ import axios from 'axios';
 import { API_URL } from '../../config';
 import Container from '../../Components/Container/Container';
 import BookPageItem from '../../Components/BookPageComponents/BookPageItem/BookPageItem';
-import BookPageComments from '../../Components/BookPageComponents/BookPageComments/BookPageComments';
 
 const BookPage = () => {
     const { id } = useParams()
@@ -28,8 +27,6 @@ const BookPage = () => {
   return (
     <Container>
         <BookPageItem data={book} />
-
-        <BookPageComments data={comments} />
     </Container>
   )
 }

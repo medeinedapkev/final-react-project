@@ -5,8 +5,6 @@ import { API_URL } from '../../config';
 import { toast } from 'react-toastify';
 import styles from './BooksPage.module.css';
 import BooksPageCard from '../../Components/BooksPageComponents/BooksPageCard/BooksPageCard';
-import BooksPageSideMenu from '../../Components/BooksPageComponents/BooksPageSideMenu/BooksPageSideMenu';
-
 
 const BooksPage = () => {
     const [ books, setBooks ] = useState(null);
@@ -22,16 +20,14 @@ const BooksPage = () => {
       return;
     }
 
-    const title = books.length > 0 && <h1 className={styles.title}>Visos knygos</h1>
+    const title = books.length > 0 && <h1 className={styles.title}>Visos knygos:</h1>
     
   return (
     <Container>
     <div className={styles.booksPageWrapper}>
-      {/* <BooksPageSideMenu /> */}
       {title}
       <BooksPageCard data={books} />
     </div>
-        {/* {books.map(book => <Link key={book.id} to={`/books/${book.id}`}>{book.title}</Link>)} */}
     </Container>
   )
 }
