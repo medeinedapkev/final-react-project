@@ -34,10 +34,10 @@ const Navigation = () => {
                   <NavLink to="/books">Knygos</NavLink>
                 </li>
                 <li className="menu-item">
-                  <NavLink to="/news-page">Naujienos</NavLink>
+                  <NavLink to="/categories">Žanrai</NavLink>
                 </li>
                 <li className="menu-item">
-                  <NavLink to='/contact-us'>Kontaktai</NavLink>
+                  <NavLink to='/authors'>Autoriai</NavLink>
                 </li>
 
               </ul>

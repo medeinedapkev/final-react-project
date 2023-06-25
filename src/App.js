@@ -9,6 +9,9 @@ import BooksPage from './Pages/BooksPage/BooksPage';
 import BookPage from './Pages/BookPage/BookPage';
 import CreateBook from './Pages/CreateBook/CreateBook';
 import EditBook from './Pages/EditBook/EditBook';
+import CategoriesPage from './Pages/CategoriesPage/CategoriesPage';
+import CategoryPage from './Pages/CategoryPage/CategoryPage';
+import AuthorsPage from './Pages/AuthorsPage/AuthorsPage';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Route path='/books/:id' element={<BookPage />} />
         <Route path='/books/create' element={<CreateBook />} />
         <Route path='/books/edit/:id' element={<EditBook/>} />
+        <Route path='/categories' element={<CategoriesPage/>} />
+        <Route path='/categories/:id' element={<CategoryPage />} />
+        <Route path='/authors' element={<AuthorsPage/>}/>
         <Route path='/' element={
           <Container>
             <h1>Home page</h1>

@@ -3,25 +3,35 @@ import Container from '../../Components/Container/Container'
 import axios from 'axios';
 import { API_URL } from '../../config';
 import { toast } from 'react-toastify';
-import { Link } from 'react-router-dom';
+import styles from './BooksPage.module.css';
+import BooksPageCard from '../../Components/BooksPageComponents/BooksPageCard/BooksPageCard';
+import BooksPageSideMenu from '../../Components/BooksPageComponents/BooksPageSideMenu/BooksPageSideMenu';
 
 
 const BooksPage = () => {
     const [ books, setBooks ] = useState(null);
 
     useEffect(() => {
-        axios.get(`${API_URL}/books`)
+        axios.get(`${API_URL}/books?_expand=author&_expand=category`)
         .then(res => setBooks(res.data))
         .catch(err => toast.error(err.message))
     }, [])
-
+    
+    console.log(books)
     if (!books) {
-        return;
+      return;
     }
 
+    const title = books.length > 0 && <h1 className={styles.title}>Visos knygos</h1>
+    
   return (
     <Container>
-        {books.map(book => <Link key={book.id} to={`/books/${book.id}`}>{book.title}</Link>)}
+    <div className={styles.booksPageWrapper}>
+      {/* <BooksPageSideMenu /> */}
+      {title}
+      <BooksPageCard data={books} />
+    </div>
+        {/* {books.map(book => <Link key={book.id} to={`/books/${book.id}`}>{book.title}</Link>)} */}
     </Container>
   )
 }
