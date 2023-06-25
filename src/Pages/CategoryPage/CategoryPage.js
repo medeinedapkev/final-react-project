@@ -4,7 +4,9 @@ import { useParams } from 'react-router-dom';
 import { API_URL } from '../../config';
 import { toast } from 'react-toastify';
 import Card from '../../Components/Card/Card';
+import styles from './CategoryPage.module.css'
 import Container from '../../Components/Container/Container';
+import AdministratorButton from '../../Components/AdministratorButton/AdministratorButton';
 
 
 const CategoryPage = () => {
@@ -27,7 +29,16 @@ const CategoryPage = () => {
     const title = booksByCategory.books.length > 0 ? booksByCategory.title : 'Šio žanro knygų nėra';
   return (
     <Container>
-        <h1>{title}</h1>
+        <div className={styles.titleWrapper}>
+          <h1>{title}</h1>
+          <AdministratorButton 
+            toCreate='/categories/create' 
+            toEdit={`/categories/edit/${id}`} 
+            Delete={`/categories/${id}`}
+            navigateTo='/categories'
+            deleteToast='Category was successfully deleted'
+          />
+        </div>
         <Card data={booksByCategory}/>
     </Container>
   )

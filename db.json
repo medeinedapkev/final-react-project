@@ -29,34 +29,6 @@
       }
     },
     {
-      "title": "Rrrrrrrrrrrrrrrr",
-      "description": "Rrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "publisher": "Rrrrrrrrr",
-      "year": 3245,
-      "pages": 54,
-      "authorId": 2,
-      "categoryId": 2,
-      "photo": {
-        "title": "Yeyeyer",
-        "url": "https://via.placeholder.com/150/e743b"
-      },
-      "id": 2
-    },
-    {
-      "title": "Aaaaaaaaaaaaaa",
-      "description": "Aaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "publisher": "Aaaaaaaaaaaaaaaa",
-      "year": 4353,
-      "pages": 45,
-      "authorId": 2,
-      "categoryId": 3,
-      "photo": {
-        "title": "Aaaaaaaaaaa",
-        "url": "https://via.placeholder.com/150/e743b"
-      },
-      "id": 3
-    },
-    {
       "title": "Eeeeeeeeeee",
       "description": "Eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
       "publisher": "Eeeeeeeeeeeee",
@@ -88,7 +60,7 @@
   "categories": [
     {
       "id": 1,
-      "title": "Grožinė literūra"
+      "title": "Grožinė literatūra"
     },
     {
       "id": 2,
@@ -105,6 +77,10 @@
     {
       "title": "Drama",
       "id": 5
+    },
+    {
+      "title": "Treileris",
+      "id": 6
     }
   ],
   "comments": [

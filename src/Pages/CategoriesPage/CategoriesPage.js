@@ -1,12 +1,12 @@
 import Container from '../../Components/Container/Container';
 import { List, ListItem, ListItemButton, ListItemText } from '@mui/material';
-import styles from './CategoriesPage.module.css';
+
 import axios from 'axios';
 import { API_URL } from '../../config';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import Button from 'react-bootstrap/Button';
+
 
 
 const CategpriesPage = () => {
@@ -31,10 +31,7 @@ const CategpriesPage = () => {
 
   return (
     <Container>
-    <div className={styles.titleWrapper}>
       <h1>{title}</h1>
-      <Button onClick={}>Edit</Button>
-    </div>
     <List
       sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
       aria-label="contacts"

@@ -4,7 +4,6 @@ import AdministratorButton from '../../AdministratorButton/AdministratorButton';
 
 const BookPageItem = ({ data }) => {
 
-
   return (
     <>
       <Card body>
@@ -14,7 +13,13 @@ const BookPageItem = ({ data }) => {
           </div>
 
           <div className='book-item'>
-          <AdministratorButton toCreate='/books/create' toEdit={`/books/edit/${data.id}`} id={data.id} />
+          <AdministratorButton 
+          toCreate='/books/create' 
+          toEdit={`/books/edit/${data.id}`} 
+          Delete={`/books/${data.id}`}
+          navigateTo='/books'
+          deleteToast='Book was successfully deleted'
+          />
 
             <span className='book-author'>{data.author.name}</span>
             <h2 className='book-title'>{data.title}</h2>
