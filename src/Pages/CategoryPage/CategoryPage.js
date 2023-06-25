@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap'
 import { useParams } from 'react-router-dom';
 import { API_URL } from '../../config';
 import { toast } from 'react-toastify';
-import CategoryCard from '../../Components/CategoryPageComponents/CategoryCard/CategoryCard';
+import Card from '../../Components/Card/Card';
+import Container from '../../Components/Container/Container';
 
 
 const CategoryPage = () => {
@@ -28,7 +28,7 @@ const CategoryPage = () => {
   return (
     <Container>
         <h1>{title}</h1>
-        <CategoryCard data={booksByCategory}/>
+        <Card data={booksByCategory}/>
     </Container>
   )
 }

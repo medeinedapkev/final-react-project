@@ -12,6 +12,7 @@ import EditBook from './Pages/EditBook/EditBook';
 import CategoriesPage from './Pages/CategoriesPage/CategoriesPage';
 import CategoryPage from './Pages/CategoryPage/CategoryPage';
 import AuthorsPage from './Pages/AuthorsPage/AuthorsPage';
+import AuthorPage from './Pages/AuthorPage/AuthorPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/categories' element={<CategoriesPage/>} />
         <Route path='/categories/:id' element={<CategoryPage />} />
         <Route path='/authors' element={<AuthorsPage/>}/>
+        <Route path='/authors/:id' element={<AuthorPage />} />
         <Route path='/' element={
           <Container>
             <h1>Home page</h1>

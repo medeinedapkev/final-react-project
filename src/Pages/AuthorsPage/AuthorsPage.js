@@ -14,7 +14,18 @@ const AuthorsPage = () => {
     color: 'black',
   }
 
-  useEffect(() => {})
+  useEffect(() => {
+    axios.get(`${API_URL}/authors`)
+    .then(res => setAuthors(res.data))
+    .catch(err => toast.error(err.message));
+  }, [])
+
+  if (!authors) {
+    return;
+  }
+
+  const title = authors.length > 0 ? 'Knygų autoriai:' : 'Nėra knygų autorių'
+
   return (
     <Container>
           <h1>{title}</h1>
@@ -22,11 +33,11 @@ const AuthorsPage = () => {
       sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
       aria-label="contacts"
     >
-      {categories.map(category => (
-            <ListItem disablePadding key={category.id}>
+      {authors.map(author => (
+            <ListItem disablePadding key={author.id}>
               <ListItemButton>
-                <Link to={`/categories/${category.id}`} style={linkStyle}>
-                <ListItemText primary={category.title} />
+                <Link to={`/authors/${author.id}`} style={linkStyle}>
+                <ListItemText primary={author.name} />
                 </Link>
               </ListItemButton>
             </ListItem>
