@@ -13,9 +13,9 @@ const BookPage = () => {
     const [ comments, setComments ] = useState(null);
 
     useEffect(() => {
-        axios.get(`${API_URL}/books/${id}?_expand=author&_expand=category&_embed=comments&_embed=photos`)
+        axios.get(`${API_URL}/books/${id}?_expand=author&_expand=category&_embed=comments`)
         .then(res => {
-            // console.log(res.data)
+            console.log(res.data)
             setBook(res.data)
             setComments(res.data.comments)
         }).catch(err => toast.error(err.message));

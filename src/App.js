@@ -18,7 +18,7 @@ function App() {
         <Route path='/books' element={<BooksPage />} />
         <Route path='/books/:id' element={<BookPage />} />
         <Route path='/books/create' element={<CreateBook />} />
-        <Route path='/books/edit' element={<EditBook/>} />
+        <Route path='/books/edit/:id' element={<EditBook/>} />
         <Route path='/' element={
           <Container>
             <h1>Home page</h1>
