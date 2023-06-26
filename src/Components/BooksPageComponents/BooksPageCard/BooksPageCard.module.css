@@ -2,5 +2,23 @@
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    padding: 0 10px 10px;
 }
 
+.ImgWrapper {
+    height: 250px;
+}
+
+.photo {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+}
+
+.cardInfo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}

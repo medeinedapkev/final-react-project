@@ -10,7 +10,7 @@ import CommentForm from '../../CommentForm/CommentForm';
 const BookPageComments = ({ data, bookId }) => {
     const [ commentForm, setCommentForm ] = useState(false);
     const [ editComment, setEditComment ] = useState(null);
-    // const [ comments, setComments ] = useState(data);
+    const [ comments, setComments ] = useState(data);
 
     const commentFormHandler = (commentData) => {
         if (commentData) {
@@ -21,29 +21,33 @@ const BookPageComments = ({ data, bookId }) => {
         }
     }
 
-    const deleteCommentHandler = (id) => {
-        axios.delete(`${API_URL}/comments/${id}`)
+    const deleteCommentHandler = (commentId) => {
+        axios.delete(`${API_URL}/comments/${commentId}`)
         .then(res => {
-
-        //   const removeCommentIndex = comments.findIndex(comment => comment.id === commentId);
-        
-        //   setComments(prevState => prevState.toSpliced(removeCommentIndex, 1));
+          const removeCommentIndex = comments.findIndex(comment => comment.id === commentId);
+          setComments(prevState => prevState.toSpliced(removeCommentIndex, 1));
           toast.success('Comment was successfully deleted');
         }).catch(err => toast.error(err.message));
       }
 
       function commentHandler(comment) {
         if (editComment) {
-            axios.patch(`${API_URL}/comments/${comment.id}`, comment)
+            const editCommentId = comment.id;
+
+            axios.patch(`${API_URL}/comments/${editCommentId}`, comment)
             .then(res => {
                 setCommentForm(false);
+                const editCommentIndex = comments.findIndex(comment => comment.id === editCommentId);
+                setComments(prevState => prevState.toSpliced(editCommentIndex, 1, res.data));
                 toast.success('Comment was successfully edited');
             }).catch(err => toast.error(err.message));
+
         } else {
             axios.post(`${API_URL}/comments`, comment)
             .then(res => {
                 setCommentForm(false);
-                toast.success('Comment was seccessfully created')
+                setComments(prevState => [res.data, ...prevState]);
+                toast.success('Comment was seccessfully created');
             }).catch(err => toast.error(err.message));
         }
       }
@@ -51,7 +55,7 @@ const BookPageComments = ({ data, bookId }) => {
 
       const commentsFormElement = (
         <div className={styles.commentsForm}>
-          <h3>{data.length > 0 ? 'Comments:' : 'No comments'}</h3>
+          <h3>{comments.length > 0 ? 'Comments:' : 'No comments'}</h3>
           {commentForm ? (
           <CommentForm 
             bookId={bookId} 
@@ -69,7 +73,7 @@ const BookPageComments = ({ data, bookId }) => {
     <div className={styles.commentsWrapper}>
     {commentsFormElement}
         
-    {data.map(comment => (
+    {comments.map(comment => (
     <Card key={comment.id}>
       <Card.Body>
         <div className={styles.titleWrapper}>

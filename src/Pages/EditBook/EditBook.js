@@ -1,8 +1,6 @@
 import axios from 'axios';
 import Container from '../../Components/Container/Container';
 import BookForm from '../../Components/BookForm/BookForm';
-import CategoriesForm from '../../Components/CategoriesForm/CategoriesForm';
-import AuthorForm from '../../Components/AuthorForm/AuthorForm';
 import { useNavigate, useParams } from 'react-router-dom';
 import { API_URL } from '../../config';
 import { toast } from 'react-toastify';
@@ -34,8 +32,6 @@ const EditBook = () => {
 
   return (
     <Container>
-        <AuthorForm />
-        <CategoriesForm />
         <BookForm onBookFormSubmit={editBookHandler} initialData={book} />
     </Container>
   )

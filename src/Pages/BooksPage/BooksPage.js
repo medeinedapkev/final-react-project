@@ -15,18 +15,20 @@ const BooksPage = () => {
         .catch(err => toast.error(err.message))
     }, [])
     
-    console.log(books)
     if (!books) {
       return;
     }
 
-    const title = books.length > 0 && <h1 className={styles.title}>Visos knygos:</h1>
+    const title = books.length > 0 ? 'Visos knygos:' : 'Knygų nėra';
     
   return (
     <Container>
     <div className={styles.booksPageWrapper}>
-      {title}
-      <BooksPageCard data={books} />
+      <h1 className={styles.title}>{title}</h1>
+
+      <div className={styles.bookCardWrapper}>
+        <BooksPageCard data={books} />
+      </div>
     </div>
     </Container>
   )

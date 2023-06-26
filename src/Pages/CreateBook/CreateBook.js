@@ -1,6 +1,4 @@
 import { toast } from 'react-toastify';
-// import AuthorForm from '../../Components/AuthorForm/AuthorForm';
-// import CategoriesForm from '../../Components/CategoriesForm/CategoriesForm';
 import BookForm from '../../Components/BookForm/BookForm';
 import Container from '../../Components/Container/Container';
 import { API_URL } from '../../config';
@@ -21,8 +19,6 @@ const CreateBook = () => {
 
   return (
     <Container>
-        {/* <AuthorForm />
-        <CategoriesForm /> */}
         <BookForm onBookFormSubmit={createBookHandler} />
     </Container>
   )

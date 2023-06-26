@@ -11,6 +11,10 @@
     {
       "name": "Tomas Karolis",
       "id": 3
+    },
+    {
+      "name": "William Gibson",
+      "id": 4
     }
   ],
   "books": [
@@ -29,7 +33,7 @@
       }
     },
     {
-      "title": "Eeeeeeeeeee",
+      "title": "Kaip užauginti kritiškai mąstančius vaikus: kaip užauginti kritiškai mąstančius vaikus",
       "description": "Eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
       "publisher": "Eeeeeeeeeeeee",
       "year": 35345,
@@ -55,6 +59,20 @@
         "url": "https://via.placeholder.com/150/e743b"
       },
       "id": 5
+    },
+    {
+      "title": "Neuromantas",
+      "description": "„Neuromantas\" – vienintelė knyga, laimėjusi visus tris – Hugo, „Nebulos\" ir Philipo K. Dicko – apdovanojimus. Tai mokslinės fantastikos šedevras, viena įtaigiausių XX amžiuje sukurtų ateities vizijų.\n\nKeisas buvo mitriausias duomenų vagis matricoje, bet kartą supykdė žmones, kurių nederėjo erzinti. Norėdami pamokyti, jie pažeidė Keisui nervų sistemą ir užkirto kelią patekti į kibererdvę. Dabar paslaptingas naujas darbdavys suteikia jam paskutinę progą: nusamdo surengti antpuolį, kurio tikslas – įveikti neįsivaizduojamai galingą dirbtinį intelektą. Padedamas Molės, gatvės samurajės veidrodinėmis akimis, ir savo mirusio mokytojo Diksio, kurio sąmonė įrašyta į kasetę, Keisas leidžiasi į nuotykį.\n\n„Neuromantas\" – pirmas visa apimantis žvilgsnis į suskaitmenintą žmonijos ateitį. Knyga meta iššūkį tam, kaip suvokiame technologijas ir save pačius, keičia vaizduotės kraštovaizdį.",
+      "publisher": "Kitos knygos",
+      "year": 2023,
+      "pages": 318,
+      "authorId": 4,
+      "categoryId": 2,
+      "photo": {
+        "title": "Green book cover",
+        "url": "https://thumb.knygos-static.lt/YL0Efy1LFs3-NuoW7RK3CbRaNw8=/fit-in/0x800/filters:cwatermark(static/wm.png,500,75,30)/images/books/6050091/1685450948_9786094275500_Neuromantas.jpeg"
+      },
+      "id": 6
     }
   ],
   "categories": [
@@ -106,8 +124,8 @@
       "id": 3
     },
     {
-      "title": "Idomi",
-      "user": "Giedre D.",
+      "title": "Nebloga",
+      "user": "Giedre M.",
       "date": "2023-05-23",
       "bookId": 4,
       "id": 5
@@ -128,15 +146,15 @@
     },
     {
       "title": "Patiko",
-      "user": "Domas",
+      "user": "Domas_D",
       "date": "2023-05-29",
       "bookId": 4,
       "id": 8
     },
     {
-      "title": "Nelabai",
-      "user": "Saulius",
-      "date": "2023-06-14",
+      "title": "Nice",
+      "user": "Karolina",
+      "date": "2023-06-28",
       "bookId": 4,
       "id": 9
     }
