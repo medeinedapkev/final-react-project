@@ -22,7 +22,7 @@ const BooksPage = () => {
     const title = books.length > 0 ? 'Visos knygos:' : 'Knygų nėra';
     
   return (
-    <Container>
+    <Container classes='color'>
     <div className={styles.booksPageWrapper}>
       <h1 className={styles.title}>{title}</h1>
 

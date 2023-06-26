@@ -28,7 +28,7 @@ const CategoryPage = () => {
     console.log(booksByCategory.books.length )
     const title = booksByCategory.books.length > 0 ? booksByCategory.title : 'Šio žanro knygų nėra';
   return (
-    <Container>
+    <Container classes='color'>
         <div className={styles.titleWrapper}>
           <h1>{title}</h1>
           <AdministratorButton 

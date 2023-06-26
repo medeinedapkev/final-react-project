@@ -17,6 +17,7 @@ import CreateCategory from './Pages/CreateCategory/CreateCategory';
 import EditCategory from './Pages/EditCategory/EditCategory';
 import CreateAuthor from './Pages/CreateAuthor/CreateAuthor';
 import EditAuthor from './Pages/EditAuthor/EditAuthor';
+import HomePage from './Pages/HomePage/HomePage';
 
 function App() {
   return (
@@ -35,10 +36,7 @@ function App() {
         <Route path='/authors/:id' element={<AuthorPage />} />
         <Route path='/authors/create' element={<CreateAuthor />} />
         <Route path='/authors/edit/:id' element={<EditAuthor/>} />
-        <Route path='/' element={
-          <Container>
-            <h1>Home page</h1>
-          </Container>} />
+        <Route path='/' element={<HomePage />} />
         <Route path='*' element={
           <Container>
             <h1>404 ERROR. Page not found</h1>

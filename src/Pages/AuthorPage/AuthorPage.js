@@ -25,7 +25,7 @@ const AuthorPage = () => {
     const title = booksByAuthor.books.length > 0 ? booksByAuthor.name : 'Šio autoriaus knygų nėra';
 
   return (
-    <Container>
+    <Container classes='color'>
       <div className={styles.titleWrapper}>
           <h1>{title}</h1>
           <AdministratorButton

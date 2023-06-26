@@ -25,7 +25,7 @@ const BookPage = () => {
     }
 
   return (
-    <Container>
+    <Container classes='color'>
         <BookPageItem data={book} />
         <BookPageComments data={comments} bookId={id} />
     </Container>
