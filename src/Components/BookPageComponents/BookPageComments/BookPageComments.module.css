@@ -1,0 +1,13 @@
+.titleWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonsWrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.buttonDiv {
+    padding-bottom: 10px;
+}

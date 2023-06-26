@@ -1,0 +1,11 @@
+.formControl {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 400px) {
+    .formControl {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+}

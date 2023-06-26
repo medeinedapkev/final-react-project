@@ -5,6 +5,7 @@ import axios from 'axios';
 import { API_URL } from '../../config';
 import Container from '../../Components/Container/Container';
 import BookPageItem from '../../Components/BookPageComponents/BookPageItem/BookPageItem';
+import BookPageComments from '../../Components/BookPageComponents/BookPageComments/BookPageComments';
 
 const BookPage = () => {
     const { id } = useParams()
@@ -14,7 +15,6 @@ const BookPage = () => {
     useEffect(() => {
         axios.get(`${API_URL}/books/${id}?_expand=author&_expand=category&_embed=comments`)
         .then(res => {
-            console.log(res.data)
             setBook(res.data)
             setComments(res.data.comments)
         }).catch(err => toast.error(err.message));
@@ -27,6 +27,7 @@ const BookPage = () => {
   return (
     <Container>
         <BookPageItem data={book} />
+        <BookPageComments data={comments} bookId={id} />
     </Container>
   )
 }

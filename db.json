@@ -86,10 +86,59 @@
   "comments": [
     {
       "id": 1,
-      "title": "Beprotiškai gera knyga!",
+      "title": "Gera knyga!",
       "user": "Tomas",
-      "data": "2023-01-07",
+      "date": "2023-01-07",
       "bookId": 1
+    },
+    {
+      "id": 2,
+      "title": "Gera knyga!",
+      "user": "Tomas",
+      "date": "2023-01-07",
+      "bookId": 1
+    },
+    {
+      "title": "gsd",
+      "user": "brat",
+      "date": "2023-06-26",
+      "bookId": 1,
+      "id": 3
+    },
+    {
+      "title": "Idomi",
+      "user": "Giedre D.",
+      "date": "2023-05-23",
+      "bookId": 4,
+      "id": 5
+    },
+    {
+      "title": "wrqwr",
+      "user": "brat",
+      "date": "2023-06-20",
+      "bookId": 1,
+      "id": 6
+    },
+    {
+      "title": "yyyyyyyyyyy",
+      "user": "brat",
+      "date": "2023-06-20",
+      "bookId": 1,
+      "id": 7
+    },
+    {
+      "title": "Patiko",
+      "user": "Domas",
+      "date": "2023-05-29",
+      "bookId": 4,
+      "id": 8
+    },
+    {
+      "title": "Nelabai",
+      "user": "Saulius",
+      "date": "2023-06-14",
+      "bookId": 4,
+      "id": 9
     }
   ]
 }
