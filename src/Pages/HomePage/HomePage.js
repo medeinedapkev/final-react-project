@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const HomePage = () => {
   return (
-    <Container classes='color'>
+    <Container>
     <Carousel data-bs-theme="dark">
       <Carousel.Item>
         <div className={styles.imgWrapper}>
@@ -15,7 +15,7 @@ const HomePage = () => {
         />
         </div>
         <Carousel.Caption>
-          <h5>First slide label</h5>
+          <h5>Knygos visų skoniui!</h5>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -29,7 +29,7 @@ const HomePage = () => {
         />
         </div>
         <Carousel.Caption>
-          <h5>Second slide label</h5>
+          <h5>Knygos visų skoniui!</h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -42,10 +42,8 @@ const HomePage = () => {
         />
         </div>
         <Carousel.Caption>
-          <h5>Third slide label</h5>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h5>Knygos visų skoniui!</h5>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
