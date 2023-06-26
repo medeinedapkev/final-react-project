@@ -36,7 +36,7 @@
 .administratorButtonWrapper {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: flex-end;
     padding-bottom: 10px;
 }
 
@@ -211,58 +211,3 @@
         max-height: 820px;
     }
 }
-
-/* @media (max-width: 1070px) {
-    .photoWrapper {
-        width: calc((100% - 20px) / 5 * 2);
-    }
-
-    .bookItem {
-        width: calc((100% - 20px) / 5 * 3);
-    }
-
-    .bookPhoto {
-        object-fit: scale-down;
-    }
-
-}
-
-/* @media (max-width: 1070px) {
-    .photoWrapper {
-        width: calc((100% - 20px) / 5 * 2);
-    }
-
-    .bookItem {
-        width: calc((100% - 20px) / 5 * 3);
-    }
-
-    .bookPhoto {
-        object-fit: scale-down;
-    }
-
-}
-
-@media (max-width: 880px) { */
-    /* .bookWrapper {
-        display: flex;
-        gap: 20px;
-        justify-content: space-between;
-        max-height: 700px;  
-    } */
-    /* .bookWrapper {
-     flex-direction: column;   
-
-    }
-
-    .bookPhoto {
-        object-fit: scale-down;
-    }
-
-    .bookTitle {
-       font-size: 20px; 
-    }
-
-    .bookItem li {
-        font-size: 15px;
-    }
-} */ 

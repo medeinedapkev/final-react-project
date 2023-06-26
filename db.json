@@ -63,6 +63,20 @@
         "url": "https://thumb.knygos-static.lt/YL0Efy1LFs3-NuoW7RK3CbRaNw8=/fit-in/0x800/filters:cwatermark(static/wm.png,500,75,30)/images/books/6050091/1685450948_9786094275500_Neuromantas.jpeg"
       },
       "id": 6
+    },
+    {
+      "title": "Pabėgimas iš Šiaurės Korėjos",
+      "description": "Tikra sukrečianti istorija apie Eunsun Kim vaikystę Šiaurės Korėjoje, apie šalyje siaučiantį badą, nuo jo mirštančius giminaičius ir kaimynus. Jos vienintelis tikslas – išgyventi, tai pasiekti galima tik pabėgant į Kiniją. Eunsun su mama ir seserimi pavyksta tai įgyvendinti, tačiau tuo jų bėdos nesibaigė – visos trys buvo parduotos kaip vergės, slapstėsi nuo Pchenjano ir Pekino policijos, buvo sulaikytos, tardomos ir kankinamos „perauklėjimo“ stovyklose.",
+      "publisher": "Alma littera",
+      "year": 2023,
+      "pages": 176,
+      "authorId": 2,
+      "categoryId": 4,
+      "photo": {
+        "title": "Book cover",
+        "url": "https://www.adobe.com/express/create/cover/media_178ebed46ae02d6f3284c7886e9b28c5bb9046a02.jpeg?width=400&format=jpeg&optimize=medium"
+      },
+      "id": 7
     }
   ],
   "categories": [
@@ -85,18 +99,14 @@
     {
       "title": "Drama",
       "id": 5
-    },
-    {
-      "title": "Treileris",
-      "id": 6
     }
   ],
   "comments": [
     {
       "id": 1,
-      "title": "Gera knyga!",
+      "title": "Gera knyga!!!!",
       "user": "Tomas",
-      "date": "2023-01-07",
+      "date": "2023-04-06",
       "bookId": 1
     },
     {
@@ -140,6 +150,20 @@
       "date": "2023-06-15",
       "bookId": 1,
       "id": 10
+    },
+    {
+      "title": "Wow",
+      "user": "Saule",
+      "date": "2023-06-29",
+      "bookId": 1,
+      "id": 11
+    },
+    {
+      "title": "Idomu",
+      "user": "Tadas",
+      "date": "2023-06-28",
+      "bookId": 7,
+      "id": 12
     }
   ]
 }

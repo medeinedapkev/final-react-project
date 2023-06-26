@@ -26,3 +26,13 @@
 .buttonDiv {
     padding-bottom: 10px;
 }
+
+@media (max-width: 800px) {
+    .user {
+        font-size: 18px;
+    }
+
+    .date {
+        font-size: 15px;
+    }
+}

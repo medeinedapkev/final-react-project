@@ -1,10 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import styles from './BookPageComments.module.css';
-import { useState } from 'react';
-import { API_URL } from '../../../config';
-import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useState } from 'react';
+import axios from 'axios';
+import { API_URL } from '../../../config';
 import CommentForm from '../../CommentForm/CommentForm';
 
 const BookPageComments = ({ data, bookId }) => {
@@ -39,6 +39,7 @@ const BookPageComments = ({ data, bookId }) => {
                 setCommentForm(false);
                 const editCommentIndex = comments.findIndex(comment => comment.id === editCommentId);
                 setComments(prevState => prevState.toSpliced(editCommentIndex, 1, res.data));
+                setEditComment(null);
                 toast.success('Comment was successfully edited');
             }).catch(err => toast.error(err.message));
 

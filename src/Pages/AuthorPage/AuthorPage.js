@@ -27,7 +27,7 @@ const AuthorPage = () => {
   return (
     <Container classes='color'>
       <div className={styles.titleWrapper}>
-          <h1>{title}</h1>
+          <h1 className={styles.title}>{title}</h1>
           <AdministratorButton
             toCreate='/authors/create' 
             toEdit={`/authors/edit/${id}`} 

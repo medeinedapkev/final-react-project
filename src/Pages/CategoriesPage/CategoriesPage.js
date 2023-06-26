@@ -1,5 +1,6 @@
 import Container from '../../Components/Container/Container';
 import { List, ListItem, ListItemButton, ListItemText } from '@mui/material';
+import styles from './CategoriesPage.module.css'
 
 import axios from 'axios';
 import { API_URL } from '../../config';
@@ -31,7 +32,7 @@ const CategpriesPage = () => {
 
   return (
     <Container>
-      <h1>{title}</h1>
+      <h1 className={styles.title}>{title}</h1>
     <List
       sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
       aria-label="contacts"

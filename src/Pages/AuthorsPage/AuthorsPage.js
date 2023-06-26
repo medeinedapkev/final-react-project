@@ -5,6 +5,7 @@ import axios from 'axios';
 import { API_URL } from '../../config';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
+import styles from './AuthorsPage.module.css';
 
 const AuthorsPage = () => {
   const [ authors, setAuthors ] = useState(null);
@@ -28,7 +29,7 @@ const AuthorsPage = () => {
 
   return (
     <Container>
-          <h1>{title}</h1>
+      <h1 className={styles.title}>{title}</h1>
     <List
       sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
       aria-label="contacts"

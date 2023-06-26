@@ -8,13 +8,18 @@
     top: 0;
     width: 100%;
     z-index: 100;
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 4px 6px -6px #222;
+   
 }
+
 .main-header-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 15px 0;
+    padding: 15px 0 10px;
 }
 
 .main-navigation {

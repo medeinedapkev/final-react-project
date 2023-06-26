@@ -6,7 +6,7 @@ import Logo from '../../Assets/open-book.png'
 const Navigation = () => {
   return (
     <Container>
-         <header className="main-header">
+      <header className="main-header">
           <div className="main-header-wrapper">
   
             <div className="logo-wrapper">
