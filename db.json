@@ -29,7 +29,7 @@
       "year": 2020,
       "publisher": "Liūtai ne avys",
       "pages": 640,
-      "authorId": 2,
+      "authorId": 1,
       "categoryId": 2,
       "photo": {
         "title": "Knygos viršelis",
@@ -107,13 +107,6 @@
       "bookId": 1
     },
     {
-      "title": "gsd",
-      "user": "brat",
-      "date": "2023-06-26",
-      "bookId": 1,
-      "id": 3
-    },
-    {
       "title": "Nebloga",
       "user": "Giedre M.",
       "date": "2023-05-23",
@@ -121,18 +114,11 @@
       "id": 5
     },
     {
-      "title": "wrqwr",
-      "user": "brat",
+      "title": "Kazkas naujo",
+      "user": "Kevinas",
       "date": "2023-06-20",
       "bookId": 1,
       "id": 6
-    },
-    {
-      "title": "yyyyyyyyyyy",
-      "user": "brat",
-      "date": "2023-06-20",
-      "bookId": 1,
-      "id": 7
     },
     {
       "title": "Patiko",
@@ -147,6 +133,13 @@
       "date": "2023-06-28",
       "bookId": 4,
       "id": 9
+    },
+    {
+      "title": "Nustebino",
+      "user": "Gabriele K.",
+      "date": "2023-06-15",
+      "bookId": 1,
+      "id": 10
     }
   ]
 }
