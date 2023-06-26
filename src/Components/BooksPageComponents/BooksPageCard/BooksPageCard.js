@@ -14,6 +14,7 @@ const BooksPageCard = ({ data }) => {
           <div className={styles.ImgWrapper}>
             <img className={styles.photo} src={book.photo.url} alt={book.photo.title} />
           </div>
+          
           <Card.Body>
             <div className={styles.cardInfo}>
               <div className={styles.cardTitle}>
@@ -23,7 +24,6 @@ const BooksPageCard = ({ data }) => {
 
               <Button variant="primary" onClick={() => toBookPage(book.id)}>See the book</Button>
             </div>
-
             </Card.Body>
         </Card>
         ))}

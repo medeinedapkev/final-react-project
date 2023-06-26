@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import styles from './CommentForm.module.css';
 import { toast } from 'react-toastify';
 
@@ -72,18 +74,9 @@ const CommentForm = ({ bookId, onCommentFormSubmit, initialData }) => {
     }
 
   return (
+      
     <Form onSubmit={commentFormHandler}>
-      <div className={styles.formControl}>
-        
-        <Form.Label htmlFor="usernameInput" visuallyHidden>User: </Form.Label>
-           <Form.Control
-           className="mb-2"
-           id="usernameInput"
-           placeholder="Username"
-           value={user}
-           onChange={userHandler}
-           />
-
+      <Form.Group className="mb-3" >
         <Form.Label htmlFor="commentInput" visuallyHidden>Comment: </Form.Label>
            <Form.Control
            as="textarea"
@@ -93,19 +86,35 @@ const CommentForm = ({ bookId, onCommentFormSubmit, initialData }) => {
            value={title}
            onChange={titleHandler}
            />
-
-        <Form.Label htmlFor="dateInput" visuallyHidden>Date: </Form.Label>
+        </Form.Group>
+           
+        <Row xs='auto'>
+        <Form.Group  >
+        <Form.Label htmlFor="usernameInput" visuallyHidden>User: </Form.Label>
            <Form.Control
            className="mb-2"
-           id="dateInput"
-           value={date}
-           onChange={dateHandler}
-           type="date"
+           id="usernameInput"
+           placeholder="Username"
+           value={user}
+           onChange={userHandler}
            />
-        
-        <Button type="submit" className="mb-2">Submit</Button>
-      </div>
+        </Form.Group>
+
+        <Form.Group  >
+           <Form.Label htmlFor="dateInput" visuallyHidden>Date: </Form.Label>
+              <Form.Control
+                className="mb-2"
+                id="dateInput"
+                value={date}
+                onChange={dateHandler}
+                type="date"
+              />
+        </Form.Group>
+          <Button type="submit" className="mb-2">{initialData ? 'Save changes' : 'Comment'}</Button>
+        </Row>
+
     </Form>
+      
   )
 }
 

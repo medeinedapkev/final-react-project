@@ -152,7 +152,7 @@ const BookForm = ({ onBookFormSubmit, initialData }) => {
 
   return (
     <div className={styles.bookFormWrapper}>
-      <h2 className={styles.formTitle}>Create new book:</h2>
+      <h2 className={styles.formTitle}>{initialData ? 'Edit book:' : 'Create new book:'}</h2>
     <Form onSubmit={bookFormHandler}>
     <Form.Group className="mb-3" >
       <Form.Label htmlFor="bookTitleInput">Book title:</Form.Label>
@@ -247,7 +247,7 @@ const BookForm = ({ onBookFormSubmit, initialData }) => {
        />
     </Form.Group>
 
-    <Button variant="primary" type="submit">Submit</Button>
+    <Button variant="primary" type="submit">{initialData ? 'Save changes' : 'Create a book'}</Button>
   </Form>
   </div>        
   )

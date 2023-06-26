@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
-import styles from './BookPageComments.module.css';
 import Card from 'react-bootstrap/Card';
+import styles from './BookPageComments.module.css';
 import { useState } from 'react';
 import { API_URL } from '../../../config';
 import axios from 'axios';
@@ -52,10 +52,9 @@ const BookPageComments = ({ data, bookId }) => {
         }
       }
 
-
       const commentsFormElement = (
         <div className={styles.commentsForm}>
-          <h3>{comments.length > 0 ? 'Comments:' : 'No comments'}</h3>
+          <h3 className={styles.title}>{comments.length > 0 ? 'Comments:' : 'No comments'}</h3>
           {commentForm ? (
           <CommentForm 
             bookId={bookId} 

@@ -15,6 +15,10 @@
     {
       "name": "William Gibson",
       "id": 4
+    },
+    {
+      "name": "Julie Bogart",
+      "id": 5
     }
   ],
   "books": [
@@ -33,16 +37,16 @@
       }
     },
     {
-      "title": "Kaip užauginti kritiškai mąstančius vaikus: kaip užauginti kritiškai mąstančius vaikus",
-      "description": "Eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-      "publisher": "Eeeeeeeeeeeee",
-      "year": 35345,
-      "pages": 54,
-      "authorId": 1,
-      "categoryId": 1,
+      "title": "Kaip užauginti kritiškai mąstančius vaikus",
+      "description": "Knygoje „Kaip užauginti kritiškai mąstančius vaikus“ garsi amerikiečių edukatorė Julie Bogart remiasi daugiau nei 20 metų trunkančia vaikų ugdymo namuose ir mokymų programų rengimo patirtimi. Autorė siūlo praktinius būdus, kaip skatinti vaiko gebėjimą tyrinėti pasaulį kiekviename jo raidos etape, atskleidžia, kaip vaiko potraukiai ir išankstiniai nusistatymai veikia jo įsitikinimus, kokią įtaką patirtis mokykloje ir naršymas internete daro mąstymui, kas skatina kurti naujas įžvalgas, o ne tiesiog „suvartoti\" tai, ko buvo išmokytas, pateikia strategijų, kaip susigrąžinti sąmoningo skaitymo įgūdžius.",
+      "publisher": "Vaga",
+      "year": 2023,
+      "pages": 368,
+      "authorId": 5,
+      "categoryId": 2,
       "photo": {
-        "title": "25344444444444444",
-        "url": "https://via.placeholder.com/150/e743b"
+        "title": "Book cover",
+        "url": "https://thumb.knygos-static.lt/ujZT0ZGBCyP4AoG3HazBtF4J5l0=/fit-in/0x800/filters:cwatermark(static/wm.png,500,75,30)/images/books/13828869/1683784530_kaip-uzauginti-kritiskai-mastancius-vaikus_virselio-priekis.png"
       },
       "id": 4
     },

@@ -1,0 +1,61 @@
+.bookWrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    max-height: 700px;  
+}
+
+.photoWrapper {
+    width: calc((100% - 20px) / 3);
+}
+
+.bookPhoto {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bookItem {
+    width: calc((100% - 20px) / 3 * 2);
+}
+
+.administratorButtonWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bookAuthor {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.bookInfo {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.listTitles {
+    font-weight: 600;
+}
+
+@media (max-width: 890px) {
+    .photoWrapper {
+        width: calc((100% - 20px) / 5 * 2);
+    }
+
+    .bookItem {
+        width: calc((100% - 20px) / 5 * 3);
+    }
+
+}
+
+@media (max-width: 850px) {
+    .bookWrapper {
+        align-items: flex-start;
+    }
+
+    .bookPhoto {
+        object-fit: scale-down;
+    }
+}
