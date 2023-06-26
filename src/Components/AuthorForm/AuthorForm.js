@@ -49,7 +49,7 @@ const AuthorForm = ({ onAuthorFormSubmit, initialData }) => {
            onChange={authorHandler}
            />
         
-        <Button type="submit" className="mb-2">Submit</Button>
+        <Button type="submit" className="mb-2">{initialData ? 'Save changes' : 'Create'}</Button>
       </div>
     </Form>
     </div>
