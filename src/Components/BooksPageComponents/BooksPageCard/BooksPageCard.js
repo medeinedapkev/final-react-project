@@ -1,11 +1,12 @@
+import styles from './BooksPageCard.module.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import styles from './BooksPageCard.module.css';
 import { useNavigate } from 'react-router-dom';
 
 const BooksPageCard = ({ data }) => {
     const navigator = useNavigate();
-    const toBookPage = (id) => navigator(`/books/${id}`)
+
+    const toBookPage = (id) => navigator(`/books/${id}`);
 
   return (
     <div className={styles.cardWrapper}>
@@ -24,7 +25,7 @@ const BooksPageCard = ({ data }) => {
 
               <Button variant="primary" onClick={() => toBookPage(book.id)}>See the book</Button>
             </div>
-            </Card.Body>
+          </Card.Body>
         </Card>
         ))}
     </div>
