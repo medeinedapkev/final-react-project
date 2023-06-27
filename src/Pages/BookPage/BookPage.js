@@ -8,15 +8,16 @@ import BookPageItem from '../../Components/BookPageComponents/BookPageItem/BookP
 import BookPageComments from '../../Components/BookPageComponents/BookPageComments/BookPageComments';
 
 const BookPage = () => {
-    const { id } = useParams()
+    const { id } = useParams();
+    
     const [ book, setBook ] = useState(null);
     const [ comments, setComments ] = useState(null);
 
     useEffect(() => {
         axios.get(`${API_URL}/books/${id}?_expand=author&_expand=category&_embed=comments`)
         .then(res => {
-            setBook(res.data)
-            setComments(res.data.comments)
+            setBook(res.data);
+            setComments(res.data.comments);
         }).catch(err => toast.error(err.message));
     }, [id])
 
@@ -25,8 +26,9 @@ const BookPage = () => {
     }
 
   return (
-    <Container classes='color'>
+    <Container>
         <BookPageItem data={book} />
+
         <BookPageComments data={comments} bookId={id} />
     </Container>
   )

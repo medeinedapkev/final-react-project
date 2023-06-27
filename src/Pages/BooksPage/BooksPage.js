@@ -1,9 +1,9 @@
+import styles from './BooksPage.module.css';
+import { toast } from 'react-toastify';
 import { useEffect, useState } from 'react';
-import Container from '../../Components/Container/Container'
 import axios from 'axios';
 import { API_URL } from '../../config';
-import { toast } from 'react-toastify';
-import styles from './BooksPage.module.css';
+import Container from '../../Components/Container/Container'
 import BooksPageCard from '../../Components/BooksPageComponents/BooksPageCard/BooksPageCard';
 
 const BooksPage = () => {
@@ -12,7 +12,7 @@ const BooksPage = () => {
     useEffect(() => {
         axios.get(`${API_URL}/books?_expand=author&_expand=category`)
         .then(res => setBooks(res.data))
-        .catch(err => toast.error(err.message))
+        .catch(err => toast.error(err.message));
     }, [])
     
     if (!books) {
@@ -22,7 +22,7 @@ const BooksPage = () => {
     const title = books.length > 0 ? 'Visos knygos:' : 'Knygų nėra';
     
   return (
-    <Container classes='color'>
+  <Container>
     <div className={styles.booksPageWrapper}>
       <h1 className={styles.title}>{title}</h1>
 
@@ -30,7 +30,7 @@ const BooksPage = () => {
         <BooksPageCard data={books} />
       </div>
     </div>
-    </Container>
+  </Container>
   )
 }
 
