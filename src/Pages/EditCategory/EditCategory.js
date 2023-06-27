@@ -1,14 +1,15 @@
-import Container from '../../Components/Container/Container';
-import CategoriesForm from '../../Components/CategoriesForm/CategoriesForm';
+import { toast } from 'react-toastify';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../config';
-import { toast } from 'react-toastify';
+import Container from '../../Components/Container/Container';
+import CategoriesForm from '../../Components/CategoriesForm/CategoriesForm';
 
 const EditCategory = () => {
     const { id } = useParams();
-    const navigator = useNavigate()
+    const navigator = useNavigate();
+    
     const [ category, setCategory ] = useState(null);
 
     useEffect(() => {
