@@ -1,11 +1,11 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import { useNavigate } from 'react-router-dom';
-import { API_URL } from '../../config';
-import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { API_URL } from '../../config';
 
-const AdministratorButton = ({ toCreate, toEdit, id, Delete, navigateTo, deleteToast }) => {
+const AdministratorButton = ({ toCreate, toEdit, Delete, navigateTo, deleteToast }) => {
     const navigator = useNavigate();
 
     const deleteHandler = () => {

@@ -1,23 +1,17 @@
 .formControl {
     display: flex;
     gap: 20px;
+    align-items: flex-start;
 }
 
 .formTitle {
     font-size: 20px;
-    margin-top: 10px;
+    margin: 14px 10px 14px 0;
 }
-
 
 @media (max-width: 400px) {
     .formControl {
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 0;
-    }
-}
-
-@media (max-width: 260px) {
-    .formTitle {
-        font-size: 15px;
     }
 }
