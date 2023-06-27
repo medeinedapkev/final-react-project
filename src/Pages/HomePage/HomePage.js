@@ -1,10 +1,18 @@
 import styles from './HomePage.module.css';
-import Container from '../../Components/Container/Container';
 import Carousel from 'react-bootstrap/Carousel';
+import Container from '../../Components/Container/Container';
 
 const HomePage = () => {
+  const mainLabel1 = 'Knygos visų skoniui!';
+  const mainLabel2 = 'Knygos visų skoniui!';
+  const mainLabel3 = 'Knygos visų skoniui!';
+
+  const secondLabel1 = 'Nulla vitae elit libero, a pharetra augue mollis interdum.';
+  const secondLabel2 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+  const secondLabel3 = 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.';
+
   return (
-    <Container>
+  <Container>
     <Carousel data-bs-theme="dark">
       <Carousel.Item>
         <div className={styles.imgWrapper}>
@@ -15,8 +23,8 @@ const HomePage = () => {
         />
         </div>
         <Carousel.Caption>
-          <h5>Knygos visų skoniui!</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h5>{mainLabel1}</h5>
+          <p>{secondLabel1}</p>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -29,10 +37,11 @@ const HomePage = () => {
         />
         </div>
         <Carousel.Caption>
-          <h5>Knygos visų skoniui!</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h5>{mainLabel2}</h5>
+          <p>{secondLabel2}.</p>
         </Carousel.Caption>
       </Carousel.Item>
+
       <Carousel.Item>
       <div className={styles.imgWrapper}>
         <img
@@ -42,12 +51,12 @@ const HomePage = () => {
         />
         </div>
         <Carousel.Caption>
-          <h5>Knygos visų skoniui!</h5>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <h5>{mainLabel3}</h5>
+          <p>{secondLabel3}</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-    </Container>
+  </Container>
   )
 }
 

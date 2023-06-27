@@ -12,12 +12,10 @@
     .imgWrapper {
         height: 600px;
     }
-
 }
 
 @media (max-width: 500px) {
     .imgWrapper {
         height: 400px;
     }
-
 }
