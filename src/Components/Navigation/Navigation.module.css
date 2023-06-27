@@ -2,7 +2,7 @@
     text-shadow:  2px 3px #c5c1c1;  
 }
 
-.main-header {
+.mainHeader {
     background-color: white;
     position: sticky;
     top: 0;
@@ -11,10 +11,9 @@
     -webkit-box-shadow: 0 4px 6px -6px #222;
     -moz-box-shadow: 0 4px 6px -6px #222;
     box-shadow: 0 4px 6px -6px #222;
-   
 }
 
-.main-header-wrapper {
+.mainHeaderWrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -22,7 +21,7 @@
     padding: 15px 0 10px;
 }
 
-.main-navigation {
+.mainNavigation {
     display: flex;
     align-items: center;
     width: 100%;
@@ -39,7 +38,7 @@
     padding: 40px 20px;
 }
 
-.hamb-line {
+.hambLine {
     background-color: rgb(0, 0, 0);
     display: block;
     height: 2px;
@@ -47,8 +46,8 @@
     width: 24px;
 }
 
-.hamb-line::before,
-.hamb-line::after{
+.hambLine::before,
+.hambLine::after{
     background-color: rgb(0, 0, 0);
     content: '';
     display: block;
@@ -57,33 +56,33 @@
     transition: all .2s ease-out;
     width: 100%;
 }
-.hamb-line::before{
+.hambLine::before{
     top: 5px;
 }
-.hamb-line::after{
+.hambLine::after{
     top: -5px;
 }
 
-.side-menu {
+.sideMenu {
     display: none;
 }
 
-.side-menu:checked ~ .main-navigation {
+.sideMenu:checked ~ .mainNavigation {
     max-height: 100%;
 }
-.side-menu:checked ~ .hamb .hamb-line {
+.sideMenu:checked ~ .hamb .hambLine {
     background: transparent;
 }
-.side-menu:checked ~ .hamb .hamb-line::before {
+.sideMenu:checked ~ .hamb .hambLine::before {
     transform: rotate(-45deg);
     top:0;
 }
-.side-menu:checked ~ .hamb .hamb-line::after {
+.sideMenu:checked ~ .hamb .hambLine::after {
     transform: rotate(45deg);
     top:0;
 }
 
-.main-menu {
+.mainMenu {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -91,7 +90,7 @@
     list-style-type: none;
 }
 
-.main-menu a {
+.mainMenu a {
     text-decoration: none;
     color: black;
     font-weight: 700;
@@ -102,7 +101,7 @@
 
 
 @media screen and (min-width: 1120px) {
-    .main-navigation {
+    .mainNavigation {
         max-height: none;
         top: 0;
         position: relative;
@@ -110,7 +109,7 @@
         width: fit-content;
         background-color: transparent;
     }
-    .main-menu li{
+    .mainMenu li{
         float: left;
     }
     .hamb{
@@ -119,22 +118,22 @@
 }
 
 @media screen and (max-width: 1120px) {
-    .main-navigation {
+    .mainNavigation {
         flex-direction: column;
         width: 100%;
     }
-    .main-menu {
+    .mainMenu {
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
-    .menu-item {
+    .menuItem {
         font-size: 20px;
     }
 }
 
 @media screen and (max-width: 900px) {
-    .main-header-wrapper {
+    .mainHeaderWrapper {
         margin: 0;
     }
 }

@@ -1,15 +1,15 @@
 import { NavLink } from 'react-router-dom';
-import './Navigation.css';
+import styles from './Navigation.module.css';
 import Container from '../Container/Container';
 import Logo from '../../Assets/open-book.png'
 
 const Navigation = () => {
   return (
     <Container>
-      <header className="main-header">
-          <div className="main-header-wrapper">
+      <header className={styles.mainHeader}>
+          <div className={styles.mainHeaderWrapper}>
   
-            <div className="logo-wrapper">
+            <div className={styles.logoWrapper}>
                 <NavLink to='/'>
                   <img
                     src={Logo}
@@ -20,23 +20,23 @@ const Navigation = () => {
                 </NavLink>
             </div>
   
-            <input className="side-menu" type="checkbox" id="side-menu"/>
-            <label className="hamb" htmlFor="side-menu">
-            <span className="hamb-line"></span>
+            <input className={styles.sideMenu} type="checkbox" id="side-menu"/>
+            <label className={styles.hamb} htmlFor="side-menu">
+            <span className={styles.hambLine}></span>
             </label>
 
-            <nav className="main-navigation">
-              <ul className="main-menu">
-                <li className="menu-item">
+            <nav className={styles.mainNavigation}>
+              <ul className={styles.mainMenu}>
+                <li className={styles.menuItem}>
                   <NavLink to='/'>Apie mus</NavLink>
                 </li>
-                <li className="menu-item">
+                <li className={styles.menuItem}>
                   <NavLink to="/books">Knygos</NavLink>
                 </li>
-                <li className="menu-item">
+                <li className={styles.menuItem}>
                   <NavLink to="/categories">Žanrai</NavLink>
                 </li>
-                <li className="menu-item">
+                <li className={styles.menuItem}>
                   <NavLink to='/authors'>Autoriai</NavLink>
                 </li>
 
