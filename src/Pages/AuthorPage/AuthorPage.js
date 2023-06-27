@@ -1,11 +1,11 @@
+import styles from './AuthorPage.module.css';
+import Card from '../../Components/Card/Card';
+import { toast } from 'react-toastify';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_URL } from '../../config';
-import { toast } from 'react-toastify';
 import Container from '../../Components/Container/Container';
-import Card from '../../Components/Card/Card';
-import styles from './AuthorPage.module.css';
 import AdministratorButton from '../../Components/AdministratorButton/AdministratorButton';
 
 const AuthorPage = () => {
@@ -37,7 +37,7 @@ const AuthorPage = () => {
           />
       </div>
 
-        <Card data={booksByAuthor} />
+      <Card data={booksByAuthor} />
     </Container>
   )
 }

@@ -1,11 +1,11 @@
-import Container from '../../Components/Container/Container'
-import { useEffect, useState } from 'react';
-import { List, ListItem, ListItemButton, ListItemText } from '@mui/material';
-import axios from 'axios';
-import { API_URL } from '../../config';
-import { toast } from 'react-toastify';
-import { Link } from 'react-router-dom';
 import styles from './AuthorsPage.module.css';
+import { List, ListItem, ListItemButton, ListItemText } from '@mui/material';
+import { toast } from 'react-toastify';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import { API_URL } from '../../config';
+import Container from '../../Components/Container/Container'
 
 const AuthorsPage = () => {
   const [ authors, setAuthors ] = useState(null);
@@ -13,7 +13,7 @@ const AuthorsPage = () => {
   const linkStyle = {
     textDecoration: 'none',
     color: 'black',
-  }
+  };
 
   useEffect(() => {
     axios.get(`${API_URL}/authors`)
@@ -30,22 +30,22 @@ const AuthorsPage = () => {
   return (
     <Container>
       <h1 className={styles.title}>{title}</h1>
-    <List
+      <List
       sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
       aria-label="contacts"
-    >
-      {authors.map(author => (
-            <ListItem disablePadding key={author.id}>
-              <ListItemButton>
-                <Link to={`/authors/${author.id}`} style={linkStyle}>
-                <ListItemText primary={author.name} />
-                </Link>
-              </ListItemButton>
-            </ListItem>
-      ))}
+      >
+        {authors.map(author => (
+          <ListItem disablePadding key={author.id}>
+            <ListItemButton>
+              <Link to={`/authors/${author.id}`} style={linkStyle}>
+              <ListItemText primary={author.name} />
+              </Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
 
     </List>
-    </Container>
+  </Container>
   )
 }
 
