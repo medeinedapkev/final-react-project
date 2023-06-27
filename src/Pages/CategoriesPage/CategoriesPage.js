@@ -1,14 +1,11 @@
-import Container from '../../Components/Container/Container';
+import styles from './CategoriesPage.module.css';
 import { List, ListItem, ListItemButton, ListItemText } from '@mui/material';
-import styles from './CategoriesPage.module.css'
-
-import axios from 'axios';
-import { API_URL } from '../../config';
 import { toast } from 'react-toastify';
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-
-
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import { API_URL } from '../../config';
+import Container from '../../Components/Container/Container';
 
 const CategpriesPage = () => {
   const [ categories, setCategories ] = useState(null);
@@ -16,7 +13,7 @@ const CategpriesPage = () => {
   const linkStyle = {
     textDecoration: 'none',
     color: 'black',
-  }
+  };
 
   useEffect(() => {
     axios.get(`${API_URL}/categories`)
@@ -28,27 +25,27 @@ const CategpriesPage = () => {
     return;
   }
 
-  const title = categories.length > 0 ? 'Žanrai:' : 'Nėra žanrų'
+  const title = categories.length > 0 ? 'Žanrai:' : 'Nėra žanrų';
 
   return (
     <Container>
       <h1 className={styles.title}>{title}</h1>
-    <List
-      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-      aria-label="contacts"
-    >
-      {categories.map(category => (
-            <ListItem disablePadding key={category.id}>
-              <ListItemButton>
-                <Link to={`/categories/${category.id}`} style={linkStyle}>
-                <ListItemText primary={category.title} />
-                </Link>
-              </ListItemButton>
-            </ListItem>
-      ))}
+      <List
+        sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+        aria-label="contacts"
+      >
+        {categories.map(category => (
+          <ListItem disablePadding key={category.id}>
+            <ListItemButton>
+              <Link to={`/categories/${category.id}`} style={linkStyle}>
+              <ListItemText primary={category.title} />
+              </Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
 
     </List>
-    </Container>
+  </Container>
   )
 }
 
