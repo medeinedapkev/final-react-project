@@ -1,6 +1,6 @@
+import styles from './BookPageComments.module.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import styles from './BookPageComments.module.css';
 import { toast } from 'react-toastify';
 import { useState } from 'react';
 import axios from 'axios';
@@ -57,11 +57,11 @@ const BookPageComments = ({ data, bookId }) => {
         <div className={styles.commentsForm}>
           <h3 className={styles.title}>{comments.length > 0 ? 'Comments:' : 'No comments'}</h3>
           {commentForm ? (
-          <CommentForm 
-            bookId={bookId} 
-            onCommentFormSubmit={commentHandler} 
-            initialData={editComment} 
-          />
+            <CommentForm 
+              bookId={bookId} 
+              onCommentFormSubmit={commentHandler} 
+              initialData={editComment} 
+            />
           ) : (
             <div className={styles.buttonDiv}>
                 <Button onClick={() => commentFormHandler()}>Comment</Button>
@@ -71,23 +71,24 @@ const BookPageComments = ({ data, bookId }) => {
 
   return (
     <div className={styles.commentsWrapper}>
-    {commentsFormElement}
+      {commentsFormElement}
         
-    {comments.map(comment => (
-    <Card key={comment.id}>
-      <Card.Body>
-        <div className={styles.titleWrapper}>
-          <h3 className={styles.user}>{comment.user}</h3>
-          <div className={styles.buttonsWrapper}>
-            <Button onClick={() => commentFormHandler(comment)} variant="warning" size="sm">Edit</Button>
-            <Button onClick={() => deleteCommentHandler(comment.id)} variant="danger" size="sm">Delete</Button>
+      {comments.map(comment => (
+      <Card key={comment.id}>
+        <Card.Body>
+          <div className={styles.titleWrapper}>
+            <h3 className={styles.user}>{comment.user}</h3>
+            <div className={styles.buttonsWrapper}>
+              <Button onClick={() => commentFormHandler(comment)} variant="warning" size="sm">Edit</Button>
+              <Button onClick={() => deleteCommentHandler(comment.id)} variant="danger" size="sm">Delete</Button>
+            </div>
           </div>
-        </div>
-          <p>{comment.title}</p>
-          <span className={styles.date}>{comment.date}</span>
+
+            <p>{comment.title}</p>
+            <span className={styles.date}>{comment.date}</span>
         </Card.Body>
-    </Card>
-    ))}
+      </Card>
+      ))}
     </div>
   )
 }

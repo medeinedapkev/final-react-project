@@ -103,7 +103,7 @@
         grid-template-rows: repeat(6, 1fr);
     }
 
-    /* .bookWrapper .photoWrapper {
+    .bookWrapper .photoWrapper {
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 4;
@@ -121,7 +121,7 @@
         grid-column-end: 8;
         grid-row-start: 4;
         grid-row-end: 7;
-    } */
+    }
 }
 
 @media (max-width: 630px) {

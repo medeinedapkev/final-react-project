@@ -12,7 +12,6 @@ const BookPageItem = ({ data }) => {
           </div>
 
           <div className={styles.bookMainInfo}>
-
               <div className={styles.administratorButtonWrapper}>
                 <span className={styles.bookAuthor}>{data.author.name}</span>
 
@@ -36,11 +35,10 @@ const BookPageItem = ({ data }) => {
                   <li><span className={styles.listTitles}>Puslapiai:</span> {data.pages}</li>
                 </ul>
               </div>
-
           </div>
 
           <div className={styles.bookDescriptionWrapper}>
-              <p className={styles.bookDescription}>{data.description}</p>
+            <p className={styles.bookDescription}>{data.description}</p>
           </div>
         </div>
       </Card>
