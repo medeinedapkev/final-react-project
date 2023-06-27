@@ -88,8 +88,8 @@ const BookForm = ({ onBookFormSubmit, initialData }) => {
       toast.error('Publisher must have at least 3 letters');
     }
 
-    if (year.length < 4) {
-      toast.error('Year must have at least 4 numbers');
+    if (year.length < 4 || year.length > 4) {
+      toast.error('Year must have 4 numbers');
     }
 
     if (pages.length < 2) {
@@ -104,7 +104,7 @@ const BookForm = ({ onBookFormSubmit, initialData }) => {
       toast.error('url must have at least 10 symbols');
     }
   
-    if (bookTitle.length < 3 || bookDescription.length < 15 || bookPublisher.length < 3 || year.length < 4 || pages.length < 2 || bookUrlAlt.length < 5 || bookUrl.length < 10) {
+    if (bookTitle.length < 3 || bookDescription.length < 15 || bookPublisher.length < 3 || year.length < 4 || year.length > 4 || pages.length < 2 || bookUrlAlt.length < 5 || bookUrl.length < 10) {
       return;
     }
 
