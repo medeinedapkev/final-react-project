@@ -1,12 +1,12 @@
+import styles from './BookForm.module.css';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import styles from './BookForm.module.css';
+import { toast } from 'react-toastify';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../config';
-import { toast } from 'react-toastify';
 import { firstLetterUpperCase } from '../Functions/Functions';
 
 const BookForm = ({ onBookFormSubmit, initialData }) => {
@@ -108,7 +108,7 @@ const BookForm = ({ onBookFormSubmit, initialData }) => {
       return;
     }
 
-    let book = {}
+    let book = {};
 
     if (initialData) {
       book = {...initialData,
@@ -123,7 +123,7 @@ const BookForm = ({ onBookFormSubmit, initialData }) => {
           title: bookUrlAlt,
           url: bookUrl
         }
-      }
+      };
 
     } else {
       book = {
@@ -138,13 +138,11 @@ const BookForm = ({ onBookFormSubmit, initialData }) => {
           title: bookUrlAlt,
           url: bookUrl
         }
-      }
+      };
     }
     
     onBookFormSubmit(book);
   }
-
-  
 
   if (!categories || !authors) {
     return;
@@ -153,102 +151,102 @@ const BookForm = ({ onBookFormSubmit, initialData }) => {
   return (
     <div className={styles.bookFormWrapper}>
       <h2 className={styles.formTitle}>{initialData ? 'Edit book:' : 'Create new book:'}</h2>
-    <Form onSubmit={bookFormHandler}>
-    <Form.Group className="mb-3" >
-      <Form.Label htmlFor="bookTitleInput">Book title:</Form.Label>
-      <Form.Control 
-      id='bookTitleInput'
-      placeholder='Book title'
-      value={title}
-      onChange={titleHandler}
-      />
-    </Form.Group>
+      <Form onSubmit={bookFormHandler}>
+        <Form.Group className="mb-3" >
+          <Form.Label htmlFor="bookTitleInput">Book title:</Form.Label>
+          <Form.Control 
+          id='bookTitleInput'
+          placeholder='Book title'
+          value={title}
+          onChange={titleHandler}
+          />
+        </Form.Group>
 
-    <Form.Group className="mb-3" >
-      <Form.Label htmlFor="bookDescriptionInput">Book description:</Form.Label>
-      <Form.Control 
-      id='bookDescriptionInput' 
-      placeholder="Book description"
-      as="textarea"
-      style={{ height: '100px' }}
-      value={description}
-      onChange={descriptionHandler}
-      />
-    </Form.Group>
+        <Form.Group className="mb-3" >
+          <Form.Label htmlFor="bookDescriptionInput">Book description:</Form.Label>
+          <Form.Control 
+          id='bookDescriptionInput' 
+          placeholder="Book description"
+          as="textarea"
+          style={{ height: '100px' }}
+          value={description}
+          onChange={descriptionHandler}
+          />
+        </Form.Group>
 
-    <Form.Group className="mb-3" >
-      <Form.Label htmlFor="bookPublisherInput" >Publisher:</Form.Label>
-      <Form.Control
-      id='bookPublisherInput' 
-      placeholder="Publisher"
-      value={publisher}
-      onChange={publisherHandler}
-       />
-    </Form.Group>
+        <Form.Group className="mb-3" >
+          <Form.Label htmlFor="bookPublisherInput" >Publisher:</Form.Label>
+          <Form.Control
+          id='bookPublisherInput' 
+          placeholder="Publisher"
+          value={publisher}
+          onChange={publisherHandler}
+          />
+        </Form.Group>
 
-    <Row className="mb-3" xs='auto'>
-      <Form.Group as={Col} >
-        <Form.Label htmlFor="bookCategorySelect">Category:</Form.Label>
-        <Form.Select id="bookCategorySelect" value={categoryId} onChange={categoryHandler}>
-          {categories.map(category => <option key={category.id} value={category.id}>{category.id}. {category.title}</option>)}
-        </Form.Select>
-      </Form.Group>
+        <Row className="mb-3" xs='auto'>
+          <Form.Group as={Col} >
+            <Form.Label htmlFor="bookCategorySelect">Category:</Form.Label>
+            <Form.Select id="bookCategorySelect" value={categoryId} onChange={categoryHandler}>
+              {categories.map(category => <option key={category.id} value={category.id}>{category.id}. {category.title}</option>)}
+            </Form.Select>
+          </Form.Group>
 
-      <Form.Group as={Col} >
-        <Form.Label htmlFor="bookAuthorSelect">Author:</Form.Label>
-        <Form.Select id="bookAuthorSelect" value={authorId} onChange={authorHandler}>
-          {authors.map(author => <option key={author.id} value={author.id}>{author.id}. {author.name}</option>)}
-        </Form.Select>
-      </Form.Group>
-    </Row>
+          <Form.Group as={Col} >
+            <Form.Label htmlFor="bookAuthorSelect">Author:</Form.Label>
+            <Form.Select id="bookAuthorSelect" value={authorId} onChange={authorHandler}>
+              {authors.map(author => <option key={author.id} value={author.id}>{author.id}. {author.name}</option>)}
+            </Form.Select>
+          </Form.Group>
+        </Row>
 
-    <Row className="mb-3" xs='auto'>
-      <Form.Group as={Col} >
-        <Form.Label htmlFor="bookYearInput" >Year of release:</Form.Label>
-        <Form.Control
-        id='bookYearInput' 
-        placeholder="Year of release"
-        type='number'
-        value={year}
-        onChange={yearHandler}
-        />
-      </Form.Group>
+        <Row className="mb-3" xs='auto'>
+          <Form.Group as={Col} >
+            <Form.Label htmlFor="bookYearInput" >Year of release:</Form.Label>
+            <Form.Control
+            id='bookYearInput' 
+            placeholder="Year of release"
+            type='number'
+            value={year}
+            onChange={yearHandler}
+            />
+          </Form.Group>
 
-      <Form.Group as={Col} >
-        <Form.Label htmlFor="bookPagesInput" >Pages:</Form.Label>
-        <Form.Control
-        id='bookPagesInput' 
-        placeholder="Pages"
-        type='number'
-        value={pages}
-        onChange={pagesHandler}
-        />
-      </Form.Group>
-    </Row>
+          <Form.Group as={Col} >
+            <Form.Label htmlFor="bookPagesInput" >Pages:</Form.Label>
+            <Form.Control
+            id='bookPagesInput' 
+            placeholder="Pages"
+            type='number'
+            value={pages}
+            onChange={pagesHandler}
+            />
+          </Form.Group>
+        </Row>
 
-    <Form.Group className="mb-3" >
-      <Form.Label htmlFor="bookPhotoTitleInput" >Write something about photo:</Form.Label>
-      <Form.Control
-      id='bookPhotoTitleInput' 
-      placeholder="Write something about photo:"
-      value={urlAlt}
-      onChange={urlAltHandler}
-       />
-    </Form.Group>
+        <Form.Group className="mb-3" >
+          <Form.Label htmlFor="bookPhotoTitleInput" >Write something about photo:</Form.Label>
+          <Form.Control
+          id='bookPhotoTitleInput' 
+          placeholder="Write something about photo:"
+          value={urlAlt}
+          onChange={urlAltHandler}
+          />
+        </Form.Group>
 
-    <Form.Group className="mb-3" >
-      <Form.Label htmlFor="bookPhotoInput" >Photo url:</Form.Label>
-      <Form.Control
-      id='bookPhotoInput' 
-      placeholder="Photo url"
-      type='url'
-      value={url}
-      onChange={urlHandler}
-       />
-    </Form.Group>
+        <Form.Group className="mb-3" >
+          <Form.Label htmlFor="bookPhotoInput" >Photo url:</Form.Label>
+          <Form.Control
+          id='bookPhotoInput' 
+          placeholder="Photo url"
+          type='url'
+          value={url}
+          onChange={urlHandler}
+          />
+        </Form.Group>
 
-    <Button variant="primary" type="submit">{initialData ? 'Save changes' : 'Create a book'}</Button>
-  </Form>
+        <Button variant="primary" type="submit">{initialData ? 'Save changes' : 'Create a book'}</Button>
+    </Form>
   </div>        
   )
 }
