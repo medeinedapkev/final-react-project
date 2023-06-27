@@ -1,8 +1,8 @@
+import styles from './CommentForm.module.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import styles from './CommentForm.module.css';
-import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import { useEffect, useState } from 'react';
 
 const CommentForm = ({ bookId, onCommentFormSubmit, initialData }) => {
     const [ title, setTitle ] = useState('');
@@ -79,29 +79,29 @@ const CommentForm = ({ bookId, onCommentFormSubmit, initialData }) => {
            
 
         <div className={styles.formControl}>
-        <Form.Group  >
-        <Form.Label htmlFor="usernameInput" visuallyHidden>User: </Form.Label>
-           <Form.Control
-           className="mb-2"
-           id="usernameInput"
-           placeholder="Username"
-           value={user}
-           onChange={userHandler}
-           />
-        </Form.Group>
+            <Form.Group  >
+            <Form.Label htmlFor="usernameInput" visuallyHidden>User: </Form.Label>
+               <Form.Control
+               className="mb-2"
+               id="usernameInput"
+               placeholder="Username"
+               value={user}
+               onChange={userHandler}
+               />
+            </Form.Group>
 
-        <Form.Group  >
-           <Form.Label htmlFor="dateInput" visuallyHidden>Date: </Form.Label>
-              <Form.Control
+            <Form.Group  >
+               <Form.Label htmlFor="dateInput" visuallyHidden>Date: </Form.Label>
+                <Form.Control
                 className="mb-2"
                 id="dateInput"
                 value={date}
                 onChange={dateHandler}
                 type="date"
-              />
-        </Form.Group>
+                />
+            </Form.Group>
 
-        <Button type="submit" className="mb-2">{initialData ? 'Save changes' : 'Comment'}</Button>
+            <Button type="submit" className="mb-2">{initialData ? 'Save changes' : 'Comment'}</Button>
         </div>
     </Form>
   )
