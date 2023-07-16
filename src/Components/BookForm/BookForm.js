@@ -188,7 +188,7 @@ const BookForm = ({ onBookFormSubmit, initialData }) => {
           <Form.Group as={Col} >
             <Form.Label htmlFor="bookCategorySelect">Category:</Form.Label>
             <Form.Select id="bookCategorySelect" value={categoryId} onChange={categoryHandler}>
-              {categories.map(category => <option key={category.id} value={category.id}>{category.id}. {category.title}</option>)}
+              {categories.map(category => <option key={category.id} value={category.id}> {category.title}</option>)}
             </Form.Select>
           </Form.Group>
 

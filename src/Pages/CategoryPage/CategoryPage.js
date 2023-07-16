@@ -16,7 +16,6 @@ const CategoryPage = () => {
     useEffect(() => {
         axios.get(`${API_URL}/categories/${id}?_embed=books`)
         .then(res => {
-            console.log(res.data);
             setBooksByCategory(res.data);
           }).catch(err => toast.error(err.message));
     }, [id])

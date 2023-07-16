@@ -9,33 +9,19 @@
       "id": 2
     },
     {
-      "name": "Tomas Karolis",
-      "id": 3
-    },
-    {
       "name": "William Gibson",
       "id": 4
     },
     {
       "name": "Julie Bogart",
       "id": 5
+    },
+    {
+      "name": "Julia Cameron",
+      "id": 6
     }
   ],
   "books": [
-    {
-      "id": 1,
-      "title": "KŪNAS MENA VISKĄ: kaip išgydyti kūno, proto ir sielos traumas",
-      "description": "Vienas žymiausių pasaulyje traumų specialistų dr. Besselis van der Kolkas daugiau kaip tris dešimtmečius dirbo su traumas patyrusiais žmonėmis. Knygoje „Kūnas mena viską: kaip išgydyti kūno, proto ir sielos traumas“ jis pasitelkia naujausius mokslinius pasiekimus ir parodo skaitytojams, kaip trauma tikrąja žodžio prasme pakeičia ir kūną, ir smegenis, pablogina traumuotų žmonių gebėjimą justi malonumą, domėtis įvairia veikla, kontroliuoti save ir pasitikėti. Autorius tyrinėja naujoviškus gydymo būdus – nuo nervinio grįžtamojo ryšio ir meditacijos iki sporto, dramos ir jogos, kurie atveria naujas pasveikimo galimybes, suaktyvindami natūralų smegenų neuroplastiškumą. Knyga „Kūnas mena viską: kaip išgydyti kūno, proto ir sielos traumas“, pagrįsta dr. B. van der Kolko ir kitų įžymių specialistų atliktais tyrimais, parodo didžiulę mūsų santykių, kurie ir žaloja, ir gydo, jėgą bei suteikia naują viltį atgimti kitokiam gyvenimui.",
-      "year": 2020,
-      "publisher": "Liūtai ne avys",
-      "pages": 640,
-      "authorId": 1,
-      "categoryId": 2,
-      "photo": {
-        "title": "Knygos viršelis",
-        "url": "https://www.patogupirkti.lt/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/k/u/kunas-mena-viska-kaip-isgydyti-kuno-proto.jpg"
-      }
-    },
     {
       "title": "Kaip užauginti kritiškai mąstančius vaikus",
       "description": "Knygoje „Kaip užauginti kritiškai mąstančius vaikus“ garsi amerikiečių edukatorė Julie Bogart remiasi daugiau nei 20 metų trunkančia vaikų ugdymo namuose ir mokymų programų rengimo patirtimi. Autorė siūlo praktinius būdus, kaip skatinti vaiko gebėjimą tyrinėti pasaulį kiekviename jo raidos etape, atskleidžia, kaip vaiko potraukiai ir išankstiniai nusistatymai veikia jo įsitikinimus, kokią įtaką patirtis mokykloje ir naršymas internete daro mąstymui, kas skatina kurti naujas įžvalgas, o ne tiesiog „suvartoti\" tai, ko buvo išmokytas, pateikia strategijų, kaip susigrąžinti sąmoningo skaitymo įgūdžius.",
@@ -65,25 +51,63 @@
       "id": 6
     },
     {
-      "title": "Pabėgimas iš Šiaurės Korėjos",
-      "description": "Tikra sukrečianti istorija apie Eunsun Kim vaikystę Šiaurės Korėjoje, apie šalyje siaučiantį badą, nuo jo mirštančius giminaičius ir kaimynus. Jos vienintelis tikslas – išgyventi, tai pasiekti galima tik pabėgant į Kiniją. Eunsun su mama ir seserimi pavyksta tai įgyvendinti, tačiau tuo jų bėdos nesibaigė – visos trys buvo parduotos kaip vergės, slapstėsi nuo Pchenjano ir Pekino policijos, buvo sulaikytos, tardomos ir kankinamos „perauklėjimo“ stovyklose.",
+      "title": "Kūrėjo kelias: praktinės kūrybingumo pamokos",
+      "description": "Knyga „Kūrėjo kelias\", pirmą kartą JAV išleista 1992 m., iki šiol laikoma vienu iš šimto pačių geriausių saviugdos vadovų. Technologijų pažangos, automatikos ir niveliacijos amžiuje „Kūrėjo kelias\" sušvyti naujai ir padeda suvokti, kad kūryba – ne tik aukštesniųjų jėgų mums duotos galios, bet ir kasdienės pratybos, tam tikras susitarimas su savo vidiniu „aš\".\n\nKnyga naudinga pradedantiems ir jau aktyviai kuriantiems žmonėms. Ji ne tik įkvepia ir skatina kūrybinę saviraišką, bet ir siūlo konkrečius, išbandytus metodus. „Kūrėjo kelias\" skiriama visiems, norintiems pasisemti įkvėpimo, atrasti naujų idėjų ir tobulėti kasdien.",
       "publisher": "Alma littera",
       "year": 2023,
-      "pages": 176,
-      "authorId": 2,
+      "pages": 270,
+      "authorId": 6,
       "categoryId": 4,
       "photo": {
         "title": "Book cover",
-        "url": "https://www.adobe.com/express/create/cover/media_178ebed46ae02d6f3284c7886e9b28c5bb9046a02.jpeg?width=400&format=jpeg&optimize=medium"
+        "url": "https://thumb.knygos-static.lt/v5geGm0y52D2vpGF8a2LN0_VVC0=/fit-in/0x800/images/books/13839489/1684834039_Kurejo-kelias.jpg"
       },
       "id": 7
+    },
+    {
+      "title": "Seeking Wisdom",
+      "description": "From the bestselling author of The Artist's Way comes a deeply personal account of pain, healing and growth. Using her own history of alcoholism as a springboard, Julia shows the reader how to harness prayer - in whatever form that takes for the individual - to overcome seemingly insurmountable obstacles, and forge ahead towards becoming the person they were meant to be. Seeking Wisdom is a guide to 'creative unblocking': a spiritual path to deeper creativity and a more profound connection to the divine.",
+      "publisher": "Profile Books",
+      "year": 2022,
+      "pages": 208,
+      "authorId": 6,
+      "categoryId": 2,
+      "photo": {
+        "title": "Book cover",
+        "url": "https://thumb.knygos-static.lt/FVzMjJ99scFpp1Z-2aNcKav5-pM=/fit-in/800x800/filters:cwatermark(static/wm.png,500,75,30)/https://libri-media.knygos-static.lt/23abdba9-5f7a-43b7-a2e5-bdfeb948bfc6/1"
+      },
+      "id": 8
+    },
+    {
+      "title": "The Listening Path",
+      "description": "From the bestselling author of The Artist's Way comes a new, transformative guide to deeper, more profound listening and creativity. Over six weeks, readers will be given the tools to become better listeners-to their environment, the people around them, and themselves. The reward for learning to truly listen is immense. As we learn to listen, our attention is heightened and we gain healing, insight, clarity. But above all, listening creates connections and ignites a creativity that will resonate through every aspect of our lives.",
+      "publisher": "Profile Books",
+      "year": 2021,
+      "pages": 208,
+      "authorId": 6,
+      "categoryId": 2,
+      "photo": {
+        "title": "Book cover",
+        "url": "data:image/jpeg;base64,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"
+      },
+      "id": 9
+    },
+    {
+      "title": "Write for Life",
+      "description": "Julia Cameron has been teaching the world about creativity since her seminal book, The Artist's Way, first broke open the conversation around art.\n\nNow, in Write for Life, she turns to one of the subjects closest to her heart: the art and practice of writing.\n\nOver the course of six weeks, Cameron carefully guides readers step by step through the creative process. This latest guide in the Artist's Way Series:\n\n- Introduces a new tool and expands on powerful tried and true methods.\n\n- Gently guides readers through many common creative issues -- from procrastinating and getting started, to dealing with doubt, deadlines, and \"crazymakers.\"\n\n- Will help you reach your goals, whether your project is a novel, poetry, screenplay, standup, or songwriting.",
+      "publisher": "St. Martin's Essentials",
+      "year": 2020,
+      "pages": 208,
+      "authorId": 1,
+      "categoryId": 2,
+      "photo": {
+        "title": "Book cover",
+        "url": "https://mpd-biblio-covers.imgix.net/9781250866271.jpg?w=300"
+      },
+      "id": 10
     }
   ],
   "categories": [
-    {
-      "id": 1,
-      "title": "Grožinė literatūra"
-    },
     {
       "id": 2,
       "title": "Populiarioji psichologija"
@@ -97,38 +121,25 @@
       "title": "Autobiografija"
     },
     {
+      "title": "Siaubo",
+      "id": 6
+    },
+    {
       "title": "Drama",
-      "id": 5
+      "id": 7
+    },
+    {
+      "title": "Grožinė literūraaaa",
+      "id": 8
     }
   ],
   "comments": [
-    {
-      "id": 1,
-      "title": "Gera knyga!!!!",
-      "user": "Tomas",
-      "date": "2023-04-06",
-      "bookId": 1
-    },
-    {
-      "id": 2,
-      "title": "Gera knyga!",
-      "user": "Tomas",
-      "date": "2023-01-07",
-      "bookId": 1
-    },
     {
       "title": "Nebloga",
       "user": "Giedre M.",
       "date": "2023-05-23",
       "bookId": 4,
       "id": 5
-    },
-    {
-      "title": "Kazkas naujo",
-      "user": "Kevinas",
-      "date": "2023-06-20",
-      "bookId": 1,
-      "id": 6
     },
     {
       "title": "Patiko",
@@ -145,25 +156,18 @@
       "id": 9
     },
     {
-      "title": "Nustebino",
-      "user": "Gabriele K.",
-      "date": "2023-06-15",
-      "bookId": 1,
-      "id": 10
-    },
-    {
-      "title": "Wow",
-      "user": "Saule",
-      "date": "2023-06-29",
-      "bookId": 1,
-      "id": 11
-    },
-    {
-      "title": "Idomu",
-      "user": "Tadas",
+      "title": "Nuostabu111",
+      "user": "Gintare",
       "date": "2023-06-28",
       "bookId": 7,
       "id": 12
+    },
+    {
+      "title": "Woow",
+      "user": "Tadas",
+      "date": "2023-06-29",
+      "bookId": 7,
+      "id": 14
     }
   ]
 }
